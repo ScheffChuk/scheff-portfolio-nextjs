@@ -19,12 +19,11 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I'm a guy from the early '90s, living in Yushima, Tokyo, just a stone's
-        throw from Ueno Park. This is my second year living in Japan. Pink
-        Floyd's my favorite band, and I've got a soft spot for cat, especially
-        Pallas's cats（マヌルネコ）. Cooking and reading keep me busy, and in
-        the past, I worked as an English translator and interpreter. Nice to
-        meet you!
+        Hi! I&apos;m a &apos;90s-born expat living in Yushima, Tokyo, near Ueno Park. In
+        my second year in Japan, I split my time between cooking and reading
+        when I&apos;m not listening to my favorite band, RadioHead. I have a
+        particular fondness for Pallas&apos;s cats (マヌルネコ), and previously
+        worked as an English translator and interpreter. Nice to meet you!
       </p>
     </motion.section>
   );

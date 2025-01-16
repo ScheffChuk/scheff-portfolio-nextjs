@@ -9,7 +9,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import profileImage from "@/assets/do-nothing-club-dog.jpg"
+import profileImage from "@/assets/do-nothing-club-dog.jpg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -33,7 +33,7 @@ export default function Intro() {
           >
             <Image
               src={profileImage}
-              alt="Ricardo portrait"
+              alt="Scheff portrait"
               width="192"
               height="192"
               quality="95"
@@ -63,10 +63,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Scheff.</span> I'm learning to be a{" "}
-        <span className="font-bold">full-stack developer</span>. I enjoy
-        learning by building <span className="italic">sites & apps</span>. My focus recently is{" "}
-        <span className="underline">React (Next.js)</span>{" "}and Node.js.
+        <span className="font-bold">Hello, I'm Scheff.</span> I'm learning to be
+        a <span className="font-bold">full-stack developer</span>. I enjoy
+        learning by building <span className="italic">sites & apps</span>. My
+        focus recently is <span className="underline">React (Next.js)</span> and
+        Node.js.
       </motion.h1>
 
       <motion.div
