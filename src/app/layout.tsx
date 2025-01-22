@@ -5,7 +5,8 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
-import BottomButtonsGroup from "@/components/bottom-btn";
+import ThemeSwitch from "@/components/theme-switch";
+import ChatBoxButton from "@/components/chat-box-btn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,8 @@ export default function RootLayout({
             <Footer />
 
             <Toaster position="top-right" />
-            <BottomButtonsGroup />
+            <ThemeSwitch />
+            <ChatBoxButton />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>

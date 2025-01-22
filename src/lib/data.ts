@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/assets/corpcomment.png";
-import rmtdevImg from "@/assets/rmtdev.png";
-import wordanalyticsImg from "@/assets/wordanalytics.png";
+import retroLiveHouseImg from "@/assets/retroLiveHouseImg.png";
+import sheffEatsImg from "@/assets/ScheffEats.png";
+import pepperFlakesImg from "@/assets/pepperFlakesImg.png";
 
 export const links = [
   {
@@ -35,52 +35,52 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "English Studies",
+    location: "Guangzhou, China",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Studied English at Guangdong University of Foreign Studies for 4 years, focusing on language and communication skills.",
     icon: React.createElement(LuGraduationCap),
     date: "2019",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Marketing Planner",
+    location: "Guangzhou, China",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Gained hands-on experience in marketing planning and team collaboration over 2 years, learning valuable communication and project skills.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2019 - 2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Learning Full-Stack Development",
+    location: "Tokyo, Japan",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm currently attending IT trade school while pursuing self-directed learning. I'm focusing on a modern web development stack including React, TypeScript, Next.js, Tailwind CSS, Express, and Node.js.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2024 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Scheff Eats",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "My first React.js project. It is an UberEats clone project built with MERN stack, integrating Stripe payments and JWT authentication.",
+    tags: ["React", "TypeScript", "Express", "MongoDB", "Node.js"],
+    imageUrl: sheffEatsImg,
   },
   {
-    title: "rmtDev",
+    title: "Retro Live House",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A small application I built for a school assignment allows users to join music listening parties where they can vote to skip songs.",
+    tags: ["React", "Python", "Django", "Tailwind", "Django REST Framework"],
+    imageUrl: retroLiveHouseImg,
   },
   {
-    title: "Word Analytics",
+    title: "Pepper Flakes",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "An expense trakcer application for my own use built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
+    tags: ["Next.js 15", "SQL", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
+    imageUrl: pepperFlakesImg,
   },
 ] as const;
 
@@ -102,4 +102,8 @@ export const skillsData = [
   "Python",
   "Django",
   "Motion",
+  "LangChain",
 ] as const;
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const gitHubLink = "https://github.com/Scheffdarthusian";

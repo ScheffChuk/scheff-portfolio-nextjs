@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { cn } from "@/lib/utils";
 import { Message, useChat } from "ai/react";
 import { SendHorizonal, Trash, XCircle } from "lucide-react";
@@ -43,7 +44,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
   return (
     <div
       className={cn(
-        "bottom-3 right-0 z-50 w-full max-w-[450px] p-1 xl:right-36",
+        "bottom-3 right-0 z-50 w-full max-w-[450px] p-1 xl:right-28",
         open ? "fixed" : "hidden"
       )}
     >
@@ -88,7 +89,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 Send a message to start the chat
               </p>
               <p>
-                You can ask the box any question about me and it will find the
+                You can ask the bot any question about me and it will find the
                 relevant information on this website.
               </p>
             </div>
@@ -134,7 +135,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
   return (
     <div
       className={cn(
-        "mx-2 my-3 flex items-center",
+        "mx-2 my-3 flex items-start",
         isAiMessage ? "me-5 justify-start" : "ms-5 justify-end"
       )}
     >

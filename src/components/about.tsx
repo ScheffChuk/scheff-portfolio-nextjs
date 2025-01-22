@@ -18,12 +18,20 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        Hi! I&apos;m a &apos;90s-born expat living in Yushima, Tokyo, near Ueno Park. In
-        my second year in Japan, I split my time between cooking and reading
-        when I&apos;m not listening to my favorite band, RadioHead. I have a
-        particular fondness for Pallas&apos;s cats (マヌルネコ), and previously
-        worked as an English translator and interpreter. Nice to meet you!
+      <p className="mb-3 text-xl">
+        Hi! I&apos;m a tech enthusiast currently diving into the world of web
+        development. I&apos;m learning full-stack development through IT trade
+        school and self-study, focusing on modern tools like React, Next.js,
+        TypeScript, Node.js. While I&apos;m still early in my journey, I&apos;m
+        excited about building useful applications and growing as a developer.
+      </p>
+      <p className="mb-3 text-xl">
+        Outside of coding, I love listening to music and watching movies.
+        Radiohead is my favorite band and David Fincher is my favorite director.
+        But my real passion is cooking, especially when I&apos;m preparing meals
+        for my wife. I find joy in creating something special in the kitchen for
+        someone I care about. It&apos;s my way of showing care and creativity,
+        just like I hope to do through programming.
       </p>
     </motion.section>
   );
