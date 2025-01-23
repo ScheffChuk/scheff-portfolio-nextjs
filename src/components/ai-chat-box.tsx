@@ -85,12 +85,10 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 priority={true}
                 className="h-10 w-10 rounded-full mr-1 object-cover border-[0.25rem] bg-white border-white shadow-xl dark:bg-gray-900"
               />
-              <p className="text-lg font-medium">
-                Send a message to start the chat
-              </p>
+              <p className="text-lg font-medium">Hello こんにちは 你好</p>
               <p>
                 You can ask the bot any question about me and it will find the
-                relevant information on this website.
+                relevant information.
               </p>
             </div>
           )}
