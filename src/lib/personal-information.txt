@@ -27,14 +27,12 @@ Period: 2019-08 to 2022-09
 Key Achievement: Led a behind-schedule marketing project, demonstrating leadership and cross-team coordination skills
 
 TECHNICAL SKILLS
-
 Programming Languages:
 JavaScript/TypeScript: ES7, TypeScript 5.7, basic functionality implementation and DOM manipulation
 Python: Python 3.12, experience with Django for web applications
 Java: Java 8, basic programming concepts
 
 Frameworks:
-
 Next.js (Version 15) - Currently learning by building applications
 Django REST Framework - Experience in basic API endpoint creation
 
@@ -64,7 +62,6 @@ Creating user-friendly applications
 Continuous skill development
 
 PERSONAL TRAITS
-
 Key Characteristics:
 Curious and eager to learn
 Patient and calm
@@ -72,7 +69,6 @@ Strong problem-solving orientation
 Global mindset
 
 Interests:
-
 Cooking
 Technology trends
 Self-development
@@ -97,3 +93,7 @@ Intro:
 Hello, I'm Scheff. a full-stack developer in training. 
 I learn by building sites & apps, focusing primarily on the React/Next.js ecosystem and Node.js backend development. 
 Currently exploring AI agent development too.
+
+Social links:
+Github: https://github.com/Scheffdarthusian
+Instagram: https://www.instagram.com/schefftakashi

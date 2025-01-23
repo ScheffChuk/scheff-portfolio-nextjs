@@ -18,14 +18,14 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3 text-xl">
+      <p className="mb-3 px-4 md:px-6 text-base md:text-lg max-w-prose mx-auto leading-relaxed">
         Hi! I&apos;m a tech enthusiast currently diving into the world of web
         development. I&apos;m learning full-stack development through IT trade
         school and self-study, focusing on modern tools like React, Next.js,
         TypeScript, Node.js. While I&apos;m still early in my journey, I&apos;m
         excited about building useful applications and growing as a developer.
       </p>
-      <p className="mb-3 text-xl">
+      <p className="mb-3 px-4 md:px-6 text-base md:text-lg max-w-prose mx-auto leading-relaxed">
         Outside of coding, I love listening to music and watching movies.
         Radiohead is my favorite band and David Fincher is my favorite director.
         But my real passion is cooking, especially when I&apos;m preparing meals

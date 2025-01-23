@@ -67,6 +67,7 @@ export const projectsData = [
       "My first React.js project. It is an UberEats clone project built with MERN stack, integrating Stripe payments and JWT authentication.",
     tags: ["React", "TypeScript", "Express", "MongoDB", "Node.js"],
     imageUrl: sheffEatsImg,
+    websiteUrl: "https://shceff-mern-food-ordering-app-frontend.onrender.com",
   },
   {
     title: "Retro Live House",
@@ -74,6 +75,7 @@ export const projectsData = [
       "A small application I built for a school assignment allows users to join music listening parties where they can vote to skip songs.",
     tags: ["React", "Python", "Django", "Tailwind", "Django REST Framework"],
     imageUrl: retroLiveHouseImg,
+    websiteUrl: "https://scheff-retro-live-house-app.onrender.com",
   },
   {
     title: "Pepper Flakes",
@@ -81,29 +83,28 @@ export const projectsData = [
       "An expense trakcer application for my own use built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
     tags: ["Next.js 15", "SQL", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
     imageUrl: pepperFlakesImg,
+    websiteUrl: "https://pepperflakes.vercel.app",
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
   "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
+  "Tailwind CSS",
+  "Motion",
   "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
   "Express",
-  "PostgreSQL",
+  "Tanstack",
+  "Zustand",
+  "Prisma",
+  "Redux",
+  "NeonDB",
+  "MongoDB",
+  "AWS",
+  "Git",
   "Python",
   "Django",
-  "Motion",
   "LangChain",
 ] as const;
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const gitHubLink = "https://github.com/Scheffdarthusian";
