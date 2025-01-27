@@ -97,3 +97,10 @@ Currently exploring AI agent development too.
 Social links:
 Github: https://github.com/Scheffdarthusian
 Instagram: https://www.instagram.com/schefftakashi
+
+Short Introduction in Japanese:
+はじめまして、シュク　スイホウと申します。フルスタックエンジニアを目指して、Reactを使ったWebアプリケーション開発のポジションに興味を持ち、現在Next.jsやTypeScriptなどのスキルを身につけているところです。
+普段は東京情報クリエイター工学院専門学校でシステム開発を学びながら、独自でもアプリ開発の勉強を進めています。主にReactエコシステムとNode.jsバックエンド開発に焦点を当て、実践的なスキルを磨いています。
+以前は商業地産会社で働いた経験があり、マーケティングプランニングのスキルも持っています。日本語（JLPT N1）、英語（TOEIC L&R 950）、中国語を活かし、グローバルな環境での開発業務に貢献させていただければ幸いです。
+新しい技術への探究心を大切にし、最近AIエージェント開発にも関心を持って勉学に励んでおります。詳しい経歴や制作物については、私のホームページ（https://www.scheff.online/）をご覧いただければ幸いです。
+ぜひ一度お会いしてお話しできればと思います。よろしくお願いいたします。

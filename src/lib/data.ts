@@ -54,7 +54,7 @@ export const experiencesData = [
     title: "Learning Full-Stack Development",
     location: "Tokyo, Japan",
     description:
-      "I'm currently attending IT trade school while pursuing self-directed learning. I'm focusing on a modern web development stack including React, TypeScript, Next.js, Tailwind CSS, Express, and Node.js.",
+      "I'm currently attending IT trade school while pursuing self-directed learning. I'm focusing on a modern web development stack including React, TypeScript, Next.js, Tailwind CSS, and Node.js.",
     icon: React.createElement(FaReact),
     date: "2024 - present",
   },
@@ -80,8 +80,8 @@ export const projectsData = [
   {
     title: "Pepper Flakes",
     description:
-      "An expense trakcer application for my own use built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
-    tags: ["Next.js 15", "SQL", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
+      "An expense tracker application for my own use, built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
+    tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
     imageUrl: pepperFlakesImg,
     websiteUrl: "https://pepperflakes.vercel.app",
   },
