@@ -62,7 +62,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Scheff.</span> a{" "}
+        <span className="font-bold">Hello, My name is Scheff.</span> A{" "}
         <span className="font-bold">full-stack developer in training</span>. I
         learn by building <span className="italic">sites & apps</span>, focusing
         primarily on the <span className="underline">React/Next.js </span>{" "}
@@ -93,7 +93,7 @@ export default function Intro() {
 
           <a
             className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://github.com/Scheffdarthusian"
+            href="https://github.com/ScheffChuk"
             target="_blank"
           >
             <FaGithubSquare />

@@ -56,7 +56,7 @@ async function generateEmbeddings() {
 
   // Initialize text splitter
   const splitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 1000,
+    chunkSize: 800,
     chunkOverlap: 200,
     separators: ["\n\n", "\n", " ", ""],
   });

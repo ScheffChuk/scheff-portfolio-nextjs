@@ -11,8 +11,9 @@ import ChatBoxButton from "@/components/chat-box-btn";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Scheff | Personal Portfolio",
-  description: "I'm Scheff. A guy learning Programming.",
+  title: "Scheff Chuk",
+  description:
+    "A full-stack developer in training. I learn by building sites & apps, focusing primarily on the React/Next.js ecosystem and Node.js backend development. Currently exploring AI agent development too.",
 };
 
 export default function RootLayout({
