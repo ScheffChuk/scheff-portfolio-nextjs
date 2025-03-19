@@ -4,7 +4,7 @@ import ChatBoxButton from "./chat-box-btn";
 
 const BottomButtonsGroup = () => {
   return (
-    <div className="fixed bottom-5 right-5 gap-4 flex items-center justify-center">
+    <div className="fixed bottom-5 right-5 flex items-center justify-center gap-4">
       <ThemeSwitch />
       <ChatBoxButton />
     </div>

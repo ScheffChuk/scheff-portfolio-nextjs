@@ -45,10 +45,10 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
     <div
       className={cn(
         "bottom-3 right-0 z-50 w-full max-w-[450px] p-1 xl:right-28",
-        open ? "fixed" : "hidden"
+        open ? "fixed" : "hidden",
       )}
     >
-      <div className="flex flex-col h-[500px] rounded-xl bg-white shadow-xl dark:bg-gray-800">
+      <div className="flex h-[500px] flex-col rounded-xl bg-white shadow-xl dark:bg-gray-800">
         <button onClick={onClose} className="m-2 ms-auto block">
           <XCircle size={24} />
         </button>
@@ -75,7 +75,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             />
           )}
           {!error && messages.length === 0 && (
-            <div className="flex flex-col h-full items-center justify-center gap-3 text-center mx-8">
+            <div className="mx-8 flex h-full flex-col items-center justify-center gap-3 text-center">
               <Image
                 src={profileImage}
                 alt="Scheff portrait"
@@ -83,7 +83,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 height="192"
                 quality="95"
                 priority={true}
-                className="h-10 w-10 rounded-full mr-1 object-cover border-[0.25rem] bg-white border-white shadow-xl dark:bg-gray-900"
+                className="mr-1 h-10 w-10 rounded-full border-[0.25rem] border-white bg-white object-cover shadow-xl dark:bg-gray-900"
               />
               <p className="text-lg font-medium">Hello こんにちは 你好</p>
               <p>
@@ -96,7 +96,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         <form onSubmit={handleSubmit} className="m-3 flex gap-2">
           <button
             type="button"
-            className="flex items-center justify-center w-10 flex-none"
+            className="flex w-10 flex-none items-center justify-center"
             title="Clear chat"
             onClick={() => setMessages([])}
           >
@@ -106,11 +106,11 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             value={input}
             onChange={handleInputChange}
             placeholder="Say something..."
-            className="grow border rounded bg-background px-3 py-2"
+            className="bg-background grow rounded border px-3 py-2"
             ref={inputRef}
           />
           <button
-            className="flex items-center justify-center w-10 flex-none disabled:opacity-50"
+            className="flex w-10 flex-none items-center justify-center disabled:opacity-50"
             disabled={isLoading || input.length === 0}
             type="submit"
             title="Submit your message"
@@ -134,7 +134,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
     <div
       className={cn(
         "mx-2 my-3 flex items-start",
-        isAiMessage ? "me-5 justify-start" : "ms-5 justify-end"
+        isAiMessage ? "me-5 justify-start" : "ms-5 justify-end",
       )}
     >
       {isAiMessage && (
@@ -145,7 +145,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
           height="192"
           quality="95"
           priority={true}
-          className="h-10 w-10 rounded-full mr-1 object-cover border-[0.25rem] bg-white border-white shadow-xl dark:bg-gray-900"
+          className="mr-1 h-10 w-10 rounded-full border-[0.25rem] border-white bg-white object-cover shadow-xl dark:bg-gray-900"
         />
       )}
       <div
@@ -153,7 +153,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
           "rounded-md border px-3 py-2 text-gray-700",
           isAiMessage
             ? "bg-background dark:bg-white"
-            : "bg-gray-800 text-white dark:text-white"
+            : "bg-gray-800 text-white dark:text-white",
         )}
       >
         <ReactMarkdown
