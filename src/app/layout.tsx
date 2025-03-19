@@ -7,6 +7,7 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import ThemeSwitch from "@/components/theme-switch";
 import ChatBoxButton from "@/components/chat-box-btn";
+import LanguageSwitch from "@/components/language-switch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,9 +35,12 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-
             <Toaster position="top-right" />
-            <ThemeSwitch />
+            <div className="fixed top-5 right-5 flex space-x-2">
+              <LanguageSwitch />
+              <ThemeSwitch />
+            </div>
+
             <ChatBoxButton />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
