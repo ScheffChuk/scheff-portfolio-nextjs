@@ -4,9 +4,11 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { useTranslations } from "next-intl";
 
 export default function About() {
   const { ref } = useSectionInView("About");
+  const t = useTranslations("about");
 
   return (
     <motion.section
@@ -17,22 +19,12 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mx-auto mb-3 max-w-prose px-4 text-base leading-relaxed md:px-6 md:text-lg">
-        I&apos;m a tech enthusiast currently diving into the world of web
-        development. I&apos;m learning AI system development through IT trade
-        school and self-studying web development, focusing on modern tools like
-        React, Next.js, TypeScript, Node.js. While I&apos;m still early in my
-        journey, I&apos;m excited about building useful applications and growing
-        as a developer.
+      <SectionHeading>{t("title")}</SectionHeading>
+      <p className="mx-auto mb-3 max-w-prose px-4 text-start leading-relaxed md:px-6 md:text-lg">
+        {t("content1")}
       </p>
-      <p className="mx-auto mb-3 max-w-prose px-4 text-base leading-relaxed md:px-6 md:text-lg">
-        Outside of coding, I love listening to music and watching movies.
-        Radiohead is my favorite band and David Fincher is my favorite director.
-        But my real passion is cooking, especially cooking for my wife. I find
-        joy in creating something special in the kitchen for someone I care
-        about. It&apos;s my way of showing care and creativity, just like I hope
-        to do through programming.
+      <p className="mx-auto mb-3 max-w-prose px-4 text-start leading-relaxed md:px-6 md:text-lg">
+      {t("content2")}
       </p>
     </motion.section>
   );

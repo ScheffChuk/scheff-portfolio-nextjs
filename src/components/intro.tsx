@@ -9,10 +9,12 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profileImage from "@/assets/do-nothing-club-dog.jpg";
+import { useTranslations } from "next-intl";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const t = useTranslations()
 
   return (
     <section
@@ -57,18 +59,14 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-lg font-medium !leading-[1.5] sm:text-4xl"
+      <motion.h3
+        className="mb-20 mt-4 px-4 text-xs font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, My name is Scheff.</span> A{" "}
-        <span className="font-bold">full-stack developer in training</span>. I
-        learn by building <span className="italic">sites & apps</span>, focusing
-        primarily on the <span className="underline">React/Next.js </span>{" "}
-        ecosystem and Node.js backend development. Currently exploring AI agent
-        development too.
-      </motion.h1>
+        <span className="font-bold">{t("intro.greeting")}</span>
+        <span>{t("intro.selfIntro")}</span>
+      </motion.h3>
 
       <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
