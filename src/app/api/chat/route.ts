@@ -34,7 +34,7 @@ export async function POST(req: Request) {
     });
 
     const chatModel = new ChatOpenAI({
-      modelName: "gpt-3.5-turbo",
+      modelName: "gpt-4o-mini-2024-07-18",
       temperature: 0.5,
       streaming: true,
       verbose: true,
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
     });
 
     const rephrasingModel = new ChatOpenAI({
-      modelName: "gpt-3.5-turbo",
+      modelName: "gpt-4o-mini-2024-07-18",
       verbose: true,
       cache,
     });
