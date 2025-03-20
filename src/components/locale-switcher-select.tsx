@@ -43,7 +43,7 @@ export default function LocaleSwitchSelect({
     >
       <p className="sr-only">{label}</p>
       <select
-        className="flex h-[3rem] w-[4rem] items-center justify-center bg-transparent text-center transition-all"
+        className="flex h-[3rem] w-[6rem] items-center justify-center bg-transparent text-center transition-all"
         disabled={isPending}
         defaultValue={defaultValues}
         onChange={onSelectChange}

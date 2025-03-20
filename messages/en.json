@@ -18,6 +18,6 @@
   },
   "LocaleSwitcher": {
     "label": "EN",
-    "locale": "{locale, select, en {EN} jp {JP} other {Unknown}}"
+    "locale": "{locale, select, en {English} jp {日本語} other {Unknown}}"
   }
 }

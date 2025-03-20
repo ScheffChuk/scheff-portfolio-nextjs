@@ -39,7 +39,7 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
+              className="h-24 w-24 rounded-full border-[0.25rem] border-white object-cover shadow-xl"
             />
           </motion.div>
 
@@ -59,14 +59,14 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.h3
-        className="mb-20 mt-4 px-4 text-xs font-medium !leading-[1.5] sm:text-4xl"
+      <motion.h1
+        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">{t("intro.greeting")}</span>
         <span>{t("intro.selfIntro")}</span>
-      </motion.h3>
+      </motion.h1>
 
       <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
