@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import AIChatBox from "./ai-chat-box";
 import Image from "next/image";
 import profileImage from "@/assets/do-nothing-club-dog.jpg";
+import { useTranslations } from "next-intl";
 
 export default function ChatBoxButton() {
   const [chatBoxOpen, setChatBoxOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const t = useTranslations("chatbot");
 
   useEffect(() => {
     const hasSeenPopup = localStorage.getItem("hasSeenChatPopup");
@@ -31,7 +33,7 @@ export default function ChatBoxButton() {
     <>
       {showPopup && (
         <div className="animate-fade-in fixed bottom-16 right-5 mb-3 rounded-lg bg-white p-3 shadow-lg dark:bg-gray-800">
-          <p className="text-sm">Chat with my AI assistant!</p>
+          <p className="text-sm">{t("greeting")}</p>
         </div>
       )}
       <button onClick={handleButtonClick}>

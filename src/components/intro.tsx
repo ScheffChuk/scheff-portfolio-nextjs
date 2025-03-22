@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const t = useTranslations()
+  const t = useTranslations("intro")
 
   return (
     <section
@@ -64,8 +64,8 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">{t("intro.greeting")}</span>
-        <span>{t("intro.selfIntro")}</span>
+        <span className="font-bold">{t("greeting")}</span>
+        <span>{t("selfIntro")}</span>
       </motion.h1>
 
       <motion.div

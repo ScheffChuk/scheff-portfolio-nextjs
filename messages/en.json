@@ -1,20 +1,30 @@
 {
   "intro": {
-    "greeting": "Hello, My name is Scheff. A full-stack developer in training.",
-    "selfIntro": "I learn by building sites & apps, focusing primarily on the React/Next.js ecosystem and Node.js backend development. Currently exploring AI agent development too."
+    "greeting": "Hi, I am Scheff. A full-stack developer in training. ",
+    "selfIntro": "I build sites and apps to learn. I work mainly with React / Next.js, and Node.js backends. Recently I am exploring AI agent development too."
   },
   "about": {
     "title": "About me",
-    "content1": "I&apos;m a tech enthusiast currently diving into the world of web development. I&apos;m learning AI system development through IT trade school and self-studying web development, focusing on modern tools like React, Next.js, TypeScript, Node.js. While I&apos;m still early in my journey, I&apos;m excited about building useful applications and growing as a developer.",
-    "content2": "Outside of coding, I love listening to music and watching movies. Radiohead is my favorite band and David Fincher is my favorite director. But my real passion is cooking, especially cooking for my wife. I find joy in creating something special in the kitchen for someone I care about. It&apos;s my way of showing care and creativity, just like I hope to do through programming."
+    "content1": "My name is Scheff Chuk, thirty years old, married, from Guangzhou in southern China. I am studying AI systems development at Tokyo Technical College and arrive by 9:15 each morning without fail. I don't smoke. I drink moderately.",
+    "content2": "My bedtime varies, but I sleep seven hours nightly. Before sleep, I drink cold milk and read for twenty minutes. I sleep soundly until morning. I wake refreshed, like a child. My health examinations show nothing wrong."
   },
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "skill": "Skills",
-    "experience": "Experience",
-    "contact": "Contact"
+  "projects": {
+    "title": "Project Learning Journey"
+  },
+  "skills": {
+    "title": "Technologies I'm Learning"
+  },
+  "experience": {
+    "title": "My experience"
+  },
+  "contact": {
+    "title": "Contact me",
+    "message": "Please contact me directly at <Email>darthusian@gmail.com</Email> or through this form.",
+    "submit": "Submit"
+  },
+  "chatbot": {
+    "greeting": "Chat with my AI assistant!",
+    "message": "You can ask the bot any question about me and it will find the relevant information."
   },
   "LocaleSwitcher": {
     "label": "EN",

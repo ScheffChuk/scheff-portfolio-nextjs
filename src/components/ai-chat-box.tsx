@@ -7,6 +7,7 @@ import profileImage from "@/assets/do-nothing-club-dog.jpg";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 type AIChatBoxProps = {
   open: boolean;
@@ -26,6 +27,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("chatbot");
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -87,8 +89,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               />
               <p className="text-lg font-medium">Hello こんにちは 你好</p>
               <p>
-                You can ask the bot any question about me and it will find the
-                relevant information.
+                {t("message")}
               </p>
             </div>
           )}
@@ -106,7 +107,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             value={input}
             onChange={handleInputChange}
             placeholder="Say something..."
-            className="bg-background grow rounded border px-3 py-2"
+            className="grow rounded border bg-background px-3 py-2"
             ref={inputRef}
           />
           <button
