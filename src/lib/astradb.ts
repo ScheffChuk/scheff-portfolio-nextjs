@@ -23,7 +23,7 @@ export async function getVectorStore() {
           metric: "cosine",
         },
       },
-    }
+    },
   );
 }
 

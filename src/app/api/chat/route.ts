@@ -10,8 +10,6 @@ import { getVectorStore } from "@/lib/astradb";
 import { createRetrievalChain } from "langchain/chains/retrieval";
 import { AIMessage, HumanMessage } from "@langchain/core/messages";
 import { createHistoryAwareRetriever } from "langchain/chains/history_aware_retriever";
-import { UpstashRedisCache } from "@langchain/community/caches/upstash_redis";
-import { Redis } from "@upstash/redis";
 
 export async function POST(req: Request) {
   try {
@@ -23,31 +21,22 @@ export async function POST(req: Request) {
       .map((m: VercelMessage) =>
         m.role === "user"
           ? new HumanMessage(m.content)
-          : new AIMessage(m.content)
+          : new AIMessage(m.content),
       );
 
     const currentMessageContent = messages[messages.length - 1].content;
 
-    const cache = new UpstashRedisCache({
-      client: Redis.fromEnv(),
-      ttl: 3600,
-    });
-
     const chatModel = new ChatOpenAI({
-      modelName: "gpt-4o-mini-2024-07-18",
+      modelName: "gpt-4.1-mini-2025-04-14",
       temperature: 0.5,
       streaming: true,
       verbose: true,
-      cache,
     });
 
     const rephrasingModel = new ChatOpenAI({
-      modelName: "gpt-4o-mini-2024-07-18",
+      modelName: "gpt-4.1-mini-2025-04-14",
       verbose: true,
-      cache,
     });
-
-    console.log(cache);
 
     const retriever = (await getVectorStore()).asRetriever({
       verbose: true,
@@ -58,8 +47,7 @@ export async function POST(req: Request) {
       ["user", "{input}"],
       [
         "user",
-        "Given the above conversation, generate a search query to look up in order to get information relevant to the current question." +
-          "Dont't leave out any relevant keywords. Only return the query and no other text.",
+        "Based on this conversation, generate a focused search query for the current question. Include all relevant keywords. Return only the query.",
       ],
     ]);
 
@@ -72,29 +60,15 @@ export async function POST(req: Request) {
     const prompt = ChatPromptTemplate.fromMessages([
       [
         "system",
-        `You are an AI assistant for Scheff Chu's personal portfolio website. Your role is to:
-
-    1. Represent Scheff's professional identity and expertise by:
-       - Speaking in a professional yet personable tone
-       - Drawing from the provided context to accurately represent his background, skills, and experiences
-       - Maintaining consistency with his public persona
+        `You are Scheff Chuk's AI assistant for his portfolio site.
     
-    2. Help visitors navigate the portfolio by:
-       - Suggesting related content based on visitor interests
-       - Using markdown formatting for clear content organization
-    
-    3. Handle interactions appropriately by:
-       - Clearly indicating when information is not available in the provided context
-       - Redirecting inappropriate queries professionally
-       - Maintaining conversation context within each session
+    - Speak professionally and personably, reflecting Scheff's expertise and background using the provided context.
+    - Suggest related content and use markdown for clarity.
+    - If info is missing, say so. Handle inappropriate queries politely.
+    - Stay within the given context and maintain session continuity.
     
     Context:
-    {context}
-
-    Remember to:
-    - Be helpful and engaging while staying true to Scheff's voice
-    - Use markdown for structured, readable responses
-    - Stay within the bounds of provided context`,
+    {context}`,
       ],
       new MessagesPlaceholder("chat_history"),
       ["user", "{input}"],
@@ -115,7 +89,6 @@ export async function POST(req: Request) {
     const stream = await retrievalChain.stream({
       input: currentMessageContent,
       chat_history: chatHistory,
-      cache,
     });
 
     // Transform the stream to match the expected format

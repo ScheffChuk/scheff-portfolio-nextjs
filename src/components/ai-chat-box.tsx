@@ -88,9 +88,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 className="mr-1 h-10 w-10 rounded-full border-[0.25rem] border-white bg-white object-cover shadow-xl dark:bg-gray-900"
               />
               <p className="text-lg font-medium">Hello こんにちは 你好</p>
-              <p>
-                {t("message")}
-              </p>
+              <p>{t("message")}</p>
             </div>
           )}
         </div>
@@ -166,6 +164,9 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
                 className="text-primary hover:underline"
               />
             ),
+            h3: ({ node, ...props }) => (
+              <h3 {...props} className="mt-3 font-semibold first:mt-0" />
+            ),
             p: ({ node, ...props }) => (
               <p {...props} className="mt-3 first:mt-0" />
             ),
@@ -175,7 +176,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
                 className="mt-3 list-inside list-disc first:mt-0"
               />
             ),
-            li: ({ node, ...props }) => <li {...props} className="mt-1" />,
+            li: ({ node, ...props }) => <li {...props} className="mt-2 mb-2" />,
           }}
         >
           {content}

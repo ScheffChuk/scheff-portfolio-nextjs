@@ -4,15 +4,12 @@ dotenv.config({ path: ".env.local" });
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 import { DocumentInterface } from "@langchain/core/documents";
-import { getEmbeddingsCollection, getVectorStore } from "../src/lib/astradb";
+import { getVectorStore } from "../src/lib/astradb";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
-import { Redis } from "@upstash/redis";
 
 async function generateEmbeddings() {
   // Clear existing data
-  await Redis.fromEnv().flushdb();
   const vectorStore = await getVectorStore();
-  (await getEmbeddingsCollection()).deleteMany({});
 
   // Load the text file
   const textLoader = new TextLoader("src/lib/personal-information.txt");
@@ -23,7 +20,7 @@ async function generateEmbeddings() {
     (doc): DocumentInterface => ({
       pageContent: doc.pageContent,
       metadata: { url: "/resume" },
-    })
+    }),
   );
 
   // Load TypeScript files
@@ -32,7 +29,7 @@ async function generateEmbeddings() {
     {
       ".ts": (path) => new TextLoader(path),
     },
-    true
+    true,
   );
 
   // Get TS documents and process their metadata
