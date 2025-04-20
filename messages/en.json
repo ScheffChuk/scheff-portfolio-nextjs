@@ -1,11 +1,11 @@
 {
   "intro": {
     "greeting": "Hi, I am Scheff. A full-stack developer in training. ",
-    "selfIntro": "I build sites and apps to learn. I work mainly with React / Next.js, and Node.js backends. Recently I am exploring AI agent development too."
+    "selfIntro": "I build sites and apps to learn. I work mainly with React / Next.js."
   },
   "about": {
     "title": "About me",
-    "content1": "My name is Scheff Chuk, thirty years old, married, from Guangzhou in southern China. I am studying AI systems development at Tokyo Technical College and arrive by 9:15 each morning without fail. I don't smoke. I drink moderately.",
+    "content1": "My name is Scheff Chuk, thirty years old, married, from Guangzhou in southern China. I am studying AI systems development at Tokyo Information Creator College and arrive by 9:15 each morning without fail. I don't smoke. I drink moderately.",
     "content2": "My bedtime varies, but I sleep seven hours nightly. Before sleep, I drink cold milk and read for twenty minutes. I sleep soundly until morning. I wake refreshed, like a child. My health examinations show nothing wrong."
   },
   "projects": {
@@ -28,6 +28,6 @@
   },
   "LocaleSwitcher": {
     "label": "EN",
-    "locale": "{locale, select, en {English} jp {日本語} other {Unknown}}"
+    "locale": "{locale, select, en {English} ja {日本語} other {Unknown}}"
   }
 }

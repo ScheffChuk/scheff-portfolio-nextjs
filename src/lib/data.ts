@@ -33,30 +33,57 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+export const experiencesDataEng = [
   {
-    title: "English Studies",
+    title: "English Major & Family Business",
     location: "Guangzhou, China",
     description:
-      "Studied English at Guangdong University of Foreign Studies for 4 years, focusing on language and communication skills.",
+      "Helping with the family restaurant business while majoring in English at university. Develop English skills, gain an international perspective, and appreciate diverse values.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2015 - 2019",
   },
   {
-    title: "Marketing Planner",
+    title: "Marketing, Translator and English Teacher",
     location: "Guangzhou, China",
     description:
-      "Gained hands-on experience in marketing planning and team collaboration over 2 years, learning valuable communication and project skills.",
+      "Primarily handled SNS marketing, including event planning and collaboration with designers, covering a wide range of responsibilities. Also worked as a freelance translator and English teacher.",
     icon: React.createElement(CgWorkAlt),
     date: "2019 - 2022",
   },
   {
-    title: "Learning Full-Stack Development",
+    title: "Move to Japan, Japanese Language School, IT Trade School",
     location: "Tokyo, Japan",
     description:
-      "I'm currently attending IT trade school while pursuing self-directed learning. I'm focusing on a modern web development stack including React, TypeScript, Next.js, Tailwind CSS, and Node.js.",
+      "Move to Japan and enrolled in Japanese language school. Passed JLPT N1 test after one year of study. Then enrolled in an IT trade school for systematic learning, while acquiring web development skills through self-study.",
     icon: React.createElement(FaReact),
-    date: "2024 - present",
+    date: "2023 - Present",
+  },
+] as const;
+
+export const experiencesDataJap = [
+  {
+    title: "家業の手伝い、英語専攻",
+    location: "中国広州",
+    description:
+      "家族経営の飲食店を手伝いながら、大学で英語を専攻しておりました。この経験を通じて、英語力、国際的な視野や多様な価値観を身につけることができました。",
+    icon: React.createElement(LuGraduationCap),
+    date: "2015 - 2019",
+  },
+  {
+    title: "マーケティング、通訳者、英語教師",
+    location: "中国広州",
+    description:
+      "主にSNSのマーケティング業務を担当し、イベントの企画、デザイナーとの連携など幅広い業務を担当しました。フリーランスで翻訳と英語教師の仕事をしていました。",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019 - 2022",
+  },
+  {
+    title: "日本への移住、日本語学校、IT専門学校",
+    location: "東京都",
+    description:
+      "日本語学校に入学、日本で生活を体験しつつ、1年間学習でJLPT N1に合格しました。その後、IT専門学校に進学し、体系的に勉強しながら、独学でWeb開発のスキルを身につけています。",
+    icon: React.createElement(FaReact),
+    date: "2023 - 現在",
   },
 ] as const;
 
@@ -81,6 +108,33 @@ export const projectsData = [
     title: "Pepper Flakes",
     description:
       "An expense tracker application for my own use, built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
+    tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
+    imageUrl: pepperFlakesImg,
+    websiteUrl: "https://pepperflakes.vercel.app",
+  },
+] as const;
+
+export const projectsDataJap = [
+  {
+    title: "Scheff Eats",
+    description:
+      "初めてのReact.jsプロジェクトです。MERNスタックで構築されたUberEatsのクローンプロジェクトで、Stripe決済とJWT認証を統合しています。",
+    tags: ["React", "TypeScript", "Express", "MongoDB", "Node.js"],
+    imageUrl: sheffEatsImg,
+    websiteUrl: "https://shceff-mern-food-ordering-app-frontend.onrender.com",
+  },
+  {
+    title: "Retro Live House",
+    description:
+      "学校の課題で作成した小規模なアプリです。ユーザーは音楽鑑賞パーティーに参加し、曲をスキップするために投票できます。",
+    tags: ["React", "Python", "Django", "Tailwind", "Django REST Framework"],
+    imageUrl: retroLiveHouseImg,
+    websiteUrl: "https://scheff-retro-live-house-app.onrender.com",
+  },
+  {
+    title: "Pepper Flakes",
+    description:
+      "Next.js 15で構築した、個人用の家計簿アプリです。Drizzle ORMを通じてPostgreSQLデータベース統合と、Clerkによる認証機能を用意しています。",
     tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
     imageUrl: pepperFlakesImg,
     websiteUrl: "https://pepperflakes.vercel.app",

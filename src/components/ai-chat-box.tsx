@@ -176,7 +176,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
                 className="mt-3 list-inside list-disc first:mt-0"
               />
             ),
-            li: ({ node, ...props }) => <li {...props} className="mt-2 mb-2" />,
+            li: ({ node, ...props }) => <li {...props} className="mb-2 mt-2" />,
           }}
         >
           {content}

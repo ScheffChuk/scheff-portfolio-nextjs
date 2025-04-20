@@ -14,13 +14,13 @@ import { useTranslations } from "next-intl";
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const t = useTranslations("intro")
+  const t = useTranslations("intro");
 
   return (
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      className="mb-28 max-w-[50rem] scroll-mt-[100rem] sm:mb-0"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -60,11 +60,11 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-center text-xl font-medium !leading-[1.5] text-gray-900 dark:text-white/80 sm:px-0 sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">{t("greeting")}</span>
+        <span className="font-semibold">{t("greeting")}</span>
         <span>{t("selfIntro")}</span>
       </motion.h1>
 

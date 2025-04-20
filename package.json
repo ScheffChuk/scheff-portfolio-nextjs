@@ -7,7 +7,9 @@
     "build": "npm run generate && next build",
     "generate": "npx ts-node ./scripts/generate.ts",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier-format": "prettier --write .",
+    "prettier-check": "prettier --check ."
   },
   "dependencies": {
     "@datastax/astra-db-ts": "^1.5.0",

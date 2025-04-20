@@ -1,23 +1,29 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import { projectsData } from "@/lib/data";
-import Project from "./project";
+import SectionHeading from "./ui/section-heading";
+import { projectsData, projectsDataJap } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import ProjectCard from "./project";
+import { Project } from "@/lib/types";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView("Projects", 0.3);
   const t = useTranslations("projects");
+
+  const locale = useLocale();
+
+  const currentProjectsData: readonly Project[] =
+    locale === "ja" ? projectsDataJap : projectsData;
 
   return (
     <section ref={ref} id="projects" className="mb-28 scroll-mt-28">
       <SectionHeading>{t("title")}</SectionHeading>
       <div>
-        {projectsData.map((project, index) => (
+        {currentProjectsData.map((project, index) => (
           <React.Fragment key={index}>
-            <Project {...project} />
+            <ProjectCard {...project} />
           </React.Fragment>
         ))}
       </div>

@@ -10,9 +10,9 @@ import Footer from "@/components/footer";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-import ThemeSwitch from "@/components/theme-switch";
-import ChatBoxButton from "@/components/chat-box-btn";
-import LocaleSwitcher from "@/components/locale-switcher";
+import ChatBoxButton from "@/components/ui/chat-box-btn";
+import LocaleSwitcher from "@/components/ui/locale-switcher";
+import ThemeSwitch from "@/components/ui/theme-switch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,11 +53,11 @@ export default async function RootLayout({
               {children}
               <Footer />
               <Toaster position="top-right" />
+              <ChatBoxButton />
               <div className="fixed right-5 top-5 flex space-x-2">
                 <LocaleSwitcher />
                 <ThemeSwitch />
               </div>
-              <ChatBoxButton />
             </ActiveSectionContextProvider>
           </NextIntlClientProvider>
         </ThemeContextProvider>

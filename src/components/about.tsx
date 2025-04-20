@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
+import SectionHeading from "./ui/section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useTranslations } from "next-intl";
@@ -24,7 +24,7 @@ export default function About() {
         {t("content1")}
       </p>
       <p className="mx-auto mb-3 max-w-prose px-4 text-start leading-relaxed md:px-6 md:text-lg">
-      {t("content2")}
+        {t("content2")}
       </p>
     </motion.section>
   );
