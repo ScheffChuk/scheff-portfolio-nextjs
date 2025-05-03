@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
 import Header from "@/components/header";
-import "@/app/globals.css";
+import "./globals.css";
+
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
@@ -44,10 +45,10 @@ export default async function RootLayout({
         className={`${inter.className} relative bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
         {/* Pink/red gradient - hidden on mobile, visible on sm screens and up */}
-        <div className="absolute hidden right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fcdedf] blur-[9rem] dark:bg-[#946263] sm:block sm:w-[68.75rem]"></div>
+        <div className="absolute right-[11rem] top-[-6rem] -z-10 hidden h-[31.25rem] w-[31.25rem] rounded-full bg-[#fcdedf] blur-[9rem] dark:bg-[#946263] sm:block sm:w-[68.75rem]"></div>
 
         {/* Blue gradient - hidden on mobile, visible on sm screens and up */}
-        <div className="absolute hidden left-[-30rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#b5daff] blur-[9rem] dark:bg-[#184068] sm:block sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="absolute left-[-30rem] top-[-1rem] -z-10 hidden h-[31.25rem] w-[50rem] rounded-full bg-[#b5daff] blur-[9rem] dark:bg-[#184068] sm:block sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
 
         <ThemeContextProvider>
           <NextIntlClientProvider>
@@ -57,7 +58,7 @@ export default async function RootLayout({
               <Footer />
               <Toaster position="top-right" />
               <ChatBoxButton />
-              <div className="fixed right-5 top-5 flex space-x-2">
+              <div className="fixed right-5 top-7 flex space-x-2">
                 <LocaleSwitcher />
                 <ThemeSwitch />
               </div>

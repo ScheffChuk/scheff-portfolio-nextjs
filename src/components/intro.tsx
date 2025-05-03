@@ -84,7 +84,7 @@ export default function Intro() {
               setTimeOfLastClick(Date.now());
             }}
           >
-            Contact me here
+            Contact Me
           </Link>
 
           <a
