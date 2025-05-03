@@ -51,10 +51,10 @@ export const experiencesDataEng = [
     date: "2019 - 2022",
   },
   {
-    title: "Move to Japan, Japanese Language School, IT Trade School",
+    title: "Move to Japan, Language School, IT Trade School",
     location: "Tokyo, Japan",
     description:
-      "Move to Japan and enrolled in Japanese language school. Passed JLPT N1 test after one year of study. Then enrolled in an IT trade school for systematic learning, while acquiring web development skills through self-study.",
+      "Move to Japan and enrolled in language school. Passed JLPT N1 test after one year of study. Then enrolled in an IT trade school for systematic learning, while self-learning web development.",
     icon: React.createElement(FaReact),
     date: "2023 - Present",
   },

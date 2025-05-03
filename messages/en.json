@@ -1,7 +1,7 @@
 {
   "intro": {
-    "greeting": "Hi, I am Scheff. A full-stack developer in training. ",
-    "selfIntro": "I build sites and apps to learn. I work mainly with React / Next.js."
+    "greeting": "Hi, I am Scheff. ",
+    "selfIntro": "I am learning full-stack development by building sites and apps. Work mainly with React and Next.js."
   },
   "about": {
     "title": "About me",

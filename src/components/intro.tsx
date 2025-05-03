@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -79,14 +78,13 @@ export default function Intro() {
         <div className="flex flex-row gap-2">
           <Link
             href="#contact"
-            className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-105 hover:bg-gray-950 focus:scale-105 active:scale-105"
+            className="group flex items-center gap-2 rounded-full bg-gray-800 px-7 py-3 text-white outline-none transition hover:scale-105 hover:bg-gray-950 focus:scale-105 active:scale-105 md:bg-gray-900"
             onClick={() => {
               setActiveSection("Contact");
               setTimeOfLastClick(Date.now());
             }}
           >
-            Contact me here{" "}
-            <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
+            Contact me here
           </Link>
 
           <a

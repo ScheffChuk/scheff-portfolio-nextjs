@@ -14,7 +14,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { ExperienceItem } from "@/lib/types";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.5);
+  const { ref } = useSectionInView("Experience", 0.3);
   const { theme } = useTheme();
   const t = useTranslations("experience");
   const locale = useLocale();
