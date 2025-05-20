@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import retroLiveHouseImg from "@/assets/retroLiveHouseImg.png";
-import sheffEatsImg from "@/assets/ScheffEats.png";
 import pepperFlakesImg from "@/assets/pepperFlakesImg.png";
+import scheffDevImgJa from "@/assets/ScheffDevImgJa.png";
+import scheffDevImgEn from "@/assets/ScheffDevImgEn.png";
 
 export const links = [
   {
@@ -89,22 +89,6 @@ export const experiencesDataJap = [
 
 export const projectsData = [
   {
-    title: "Scheff Eats",
-    description:
-      "My first React.js project. It is an UberEats clone project built with MERN stack, integrating Stripe payments and JWT authentication.",
-    tags: ["React", "TypeScript", "Express", "MongoDB", "Node.js"],
-    imageUrl: sheffEatsImg,
-    websiteUrl: "https://shceff-mern-food-ordering-app-frontend.onrender.com",
-  },
-  {
-    title: "Retro Live House",
-    description:
-      "A small application I built for a school assignment allows users to join music listening parties where they can vote to skip songs.",
-    tags: ["React", "Python", "Django", "Tailwind", "Django REST Framework"],
-    imageUrl: retroLiveHouseImg,
-    websiteUrl: "https://scheff-retro-live-house-app.onrender.com",
-  },
-  {
     title: "Pepper Flakes",
     description:
       "An expense tracker application for my own use, built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
@@ -112,25 +96,21 @@ export const projectsData = [
     imageUrl: pepperFlakesImg,
     websiteUrl: "https://pepperflakes.vercel.app",
   },
+  {
+    title: "My site",
+    description:
+      "My portfolio website. It serves as a playground for me to try out various techs, including multilingual support, dark mode, animations, and an AI chatbot.",
+    tags: [
+      "Next.js 15",
+      "Tailwind CSS",
+      "TypeScript",
+      "Motion",
+      "Resend"],
+    imageUrl: scheffDevImgEn,
+    websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",}
 ] as const;
 
 export const projectsDataJap = [
-  {
-    title: "Scheff Eats",
-    description:
-      "初めてのReact.jsプロジェクトです。MERNスタックで構築されたUberEatsのクローンプロジェクトで、Stripe決済とJWT認証を統合しています。",
-    tags: ["React", "TypeScript", "Express", "MongoDB", "Node.js"],
-    imageUrl: sheffEatsImg,
-    websiteUrl: "https://shceff-mern-food-ordering-app-frontend.onrender.com",
-  },
-  {
-    title: "Retro Live House",
-    description:
-      "学校の課題で作成した小規模なアプリです。ユーザーは音楽鑑賞パーティーに参加し、曲をスキップするために投票できます。",
-    tags: ["React", "Python", "Django", "Tailwind", "Django REST Framework"],
-    imageUrl: retroLiveHouseImg,
-    websiteUrl: "https://scheff-retro-live-house-app.onrender.com",
-  },
   {
     title: "Pepper Flakes",
     description:
@@ -138,6 +118,19 @@ export const projectsDataJap = [
     tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
     imageUrl: pepperFlakesImg,
     websiteUrl: "https://pepperflakes.vercel.app",
+  },
+  {
+    title: "私のホームページ",
+    description:
+      "Next.js 15で構築した、私のポートフォリオサイトです。プレイグラウンドとして、多言語対応、ダークモード、アニメーション、AIチャットボットなど、色々技術を試しています。",
+    tags: [
+      "Next.js 15",
+      "Tailwind CSS",
+      "TypeScript",
+      "Motion",
+      "Resend"],
+    imageUrl: scheffDevImgJa,
+    websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
   },
 ] as const;
 
@@ -152,13 +145,11 @@ export const skillsData = [
   "Express",
   "Tanstack",
   "Zustand",
+  "Drizzle",
+  "PostgreSQL",
   "Prisma",
   "Redux",
-  "NeonDB",
-  "MongoDB",
   "AWS",
   "Git",
-  "Python",
-  "Django",
   "LangChain",
 ] as const;
