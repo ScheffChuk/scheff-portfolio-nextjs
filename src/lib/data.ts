@@ -100,14 +100,10 @@ export const projectsData = [
     title: "My site",
     description:
       "My portfolio website. It serves as a playground for me to try out various techs, including multilingual support, dark mode, animations, and an AI chatbot.",
-    tags: [
-      "Next.js 15",
-      "Tailwind CSS",
-      "TypeScript",
-      "Motion",
-      "Resend"],
+    tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
     imageUrl: scheffDevImgEn,
-    websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",}
+    websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
+  },
 ] as const;
 
 export const projectsDataJap = [
@@ -123,12 +119,7 @@ export const projectsDataJap = [
     title: "私のホームページ",
     description:
       "Next.js 15で構築した、私のポートフォリオサイトです。プレイグラウンドとして、多言語対応、ダークモード、アニメーション、AIチャットボットなど、色々技術を試しています。",
-    tags: [
-      "Next.js 15",
-      "Tailwind CSS",
-      "TypeScript",
-      "Motion",
-      "Resend"],
+    tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
     imageUrl: scheffDevImgJa,
     websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
   },

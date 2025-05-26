@@ -11,15 +11,27 @@ async function generateEmbeddings() {
   // Clear existing data
   const vectorStore = await getVectorStore();
 
-  // Load the text file
-  const textLoader = new TextLoader("src/lib/personal-information.txt");
-  const textDoc = await textLoader.load();
+  // Load all .txt files in the src/lib directory
+  const txtLoader = new DirectoryLoader(
+    "src/lib/",
+    {
+      ".txt": (path) => new TextLoader(path),
+    },
+    true,
+  );
+  const textDocs = await txtLoader.load();
 
-  // Process text document
-  const processedTextDoc = textDoc.map(
+  // Process text documents
+  const processedTextDocs = textDocs.map(
     (doc): DocumentInterface => ({
       pageContent: doc.pageContent,
-      metadata: { url: "/resume" },
+      metadata: {
+        // Extract the filename and remove extension
+        url: doc.metadata.source
+          .replace(/\\/g, "/")
+          .split("/src/lib/")[1]
+          .replace(".txt", ""),
+      },
     }),
   );
 
@@ -48,8 +60,8 @@ async function generateEmbeddings() {
       };
     });
 
-  // Combine text document with TS documents
-  const allDocs = [...processedTextDoc, ...tsDocs];
+  // Combine text documents with TS documents
+  const allDocs = [...processedTextDocs, ...tsDocs];
 
   // Initialize text splitter
   const splitter = new RecursiveCharacterTextSplitter({
