@@ -20,6 +20,9 @@ importers:
       '@langchain/openai':
         specifier: ^0.3.17
         version: 0.3.17(@langchain/core@0.3.57(openai@4.104.0(ws@8.18.2)(zod@3.25.50)))(ws@8.18.2)
+      '@langchain/textsplitters':
+        specifier: ^0.1.0
+        version: 0.1.0(@langchain/core@0.3.57(openai@4.104.0(ws@8.18.2)(zod@3.25.50)))
       '@react-email/components':
         specifier: ^0.0.13
         version: 0.0.13(@types/react@18.3.23)(react@19.1.0)

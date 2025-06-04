@@ -14,6 +14,7 @@ import { Toaster } from "react-hot-toast";
 import ChatBoxButton from "@/components/ui/chat-box-btn";
 import LocaleSwitcher from "@/components/ui/locale-switcher";
 import ThemeSwitch from "@/components/ui/theme-switch";
+import { setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,8 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   return (
     <html lang={locale} className="!scroll-smooth">
