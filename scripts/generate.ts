@@ -4,11 +4,14 @@ dotenv.config({ path: ".env.local" });
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 import { DocumentInterface } from "@langchain/core/documents";
-import { getVectorStore } from "../src/lib/astradb";
+import { getEmbeddingsCollection, getVectorStore } from "../src/lib/astradb";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 
 async function generateEmbeddings() {
   // Clear existing data
+  const collection = await getEmbeddingsCollection();
+  await collection.deleteMany({}); // This deletes all documents
+
   const vectorStore = await getVectorStore();
 
   // Load all .txt files in the src/lib directory
