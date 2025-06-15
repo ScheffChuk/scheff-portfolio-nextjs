@@ -30,7 +30,9 @@ export default function LocaleSwitchSelect({
     const newPath = `/${nextLocale}/${currentPathWithoutLocale}`;
 
     startTransition(() => {
-      router.replace(newPath);
+      router.replace(newPath, {
+        scroll: false,
+      });
     });
   }
 
