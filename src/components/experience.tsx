@@ -23,7 +23,11 @@ export default function Experience() {
     locale === "ja" ? experiencesDataJap : experiencesDataEng;
 
   return (
-    <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
+    <section
+      id="experience"
+      ref={ref}
+      className="mb-28 scroll-mt-28 text-pretty sm:mb-40"
+    >
       <SectionHeading>{t("title")}</SectionHeading>
       <VerticalTimeline lineColor="">
         {currentExperiences.map((item, index) => (
@@ -52,8 +56,8 @@ export default function Experience() {
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="!mt-1 font-normal">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <p className="!mt-2 font-normal">{item.location}</p>
+              <p className="!mt-2 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
             </VerticalTimelineElement>

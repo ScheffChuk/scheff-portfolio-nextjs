@@ -33,7 +33,7 @@ export default function Contact() {
     >
       <SectionHeading>{t("title")}</SectionHeading>
 
-      <p className="-mt-6 text-gray-700 dark:text-white/80">
+      <p className="-mt-2 text-gray-700 dark:text-white/80">
         {t.rich("message", {
           Email: (chunks) => (
             <a className="underline" href="mailto:darthusian@gmail.com">

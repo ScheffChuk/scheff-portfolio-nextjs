@@ -20,10 +20,10 @@ export default function About() {
       id="about"
     >
       <SectionHeading>{t("title")}</SectionHeading>
-      <p className="mx-auto mb-3 max-w-prose px-4 text-start leading-relaxed md:px-6 md:text-lg">
+      <p className="mx-auto mb-6 text-pretty px-4 text-start md:px-6 md:text-lg/9">
         {t("content1")}
       </p>
-      <p className="mx-auto mb-3 max-w-prose px-4 text-start leading-relaxed md:px-6 md:text-lg">
+      <p className="mx-auto text-pretty px-4 text-start md:px-6 md:text-lg/9">
         {t("content2")}
       </p>
     </motion.section>
