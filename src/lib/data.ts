@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import pepperFlakesImg from "@/assets/pepperFlakesImg.png";
 import scheffDevImgJa from "@/assets/ScheffDevImgJa.png";
 import scheffDevImgEn from "@/assets/ScheffDevImgEn.png";
+import japanDemographicChartImg from "@/assets/Japan-demographic-app.png";
 
 export const links = [
   {
@@ -89,6 +90,14 @@ export const experiencesDataJap = [
 
 export const projectsData = [
   {
+    title: "My site",
+    description:
+      "My portfolio website. It serves as a playground for me to try out various techs, including multilingual support, dark mode, animations, and an AI chatbot.",
+    tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
+    imageUrl: scheffDevImgEn,
+    websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
+  },
+  {
     title: "Pepper Flakes",
     description:
       "An expense tracker application for my own use, built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
@@ -97,24 +106,16 @@ export const projectsData = [
     websiteUrl: "https://pepperflakes.vercel.app",
   },
   {
-    title: "My site",
+    title: "Japan Demographic Chart App",
     description:
-      "My portfolio website. It serves as a playground for me to try out various techs, including multilingual support, dark mode, animations, and an AI chatbot.",
-    tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
-    imageUrl: scheffDevImgEn,
-    websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
+      "This app was developed as a coding test submission, and regardless of the interview outcome, I learned a great deal and received valuable feedback.",
+    tags: ["Next 15", "React 19", "Tailwind CSS", "Tanstack Query", "Zustand"],
+    imageUrl: japanDemographicChartImg,
+    websiteUrl: "https://population-trends-japan-nextjs.vercel.app",
   },
 ] as const;
 
 export const projectsDataJap = [
-  {
-    title: "Pepper Flakes",
-    description:
-      "Next.js 15で構築した、個人用の家計簿アプリです。Drizzle ORMを通じてPostgreSQLデータベース統合と、Clerkによる認証機能を用意しています。",
-    tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
-    imageUrl: pepperFlakesImg,
-    websiteUrl: "https://pepperflakes.vercel.app",
-  },
   {
     title: "私のホームページ",
     description:
@@ -122,6 +123,22 @@ export const projectsDataJap = [
     tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
     imageUrl: scheffDevImgJa,
     websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
+  },
+  {
+    title: "Pepper Flakes",
+    description:
+      "Next.js 15で構築した、家計簿アプリです。Drizzle ORMを通じてPostgreSQLデータベース統合と、Clerkによる認証機能を用意しています。",
+    tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
+    imageUrl: pepperFlakesImg,
+    websiteUrl: "https://pepperflakes.vercel.app",
+  },
+  {
+    title: "日本人口推移チャート",
+    description:
+      "このアプリはコーディングテストの提出物として開発しましたが、面接の結果にかかわらず、多くのことを学び、貴重なフィードバックをいただきました。",
+    tags: ["Next 15", "React 19", "Tailwind CSS", "Tanstack Query", "Zustand"],
+    imageUrl: japanDemographicChartImg,
+    websiteUrl: "https://population-trends-japan-nextjs.vercel.app",
   },
 ] as const;
 
