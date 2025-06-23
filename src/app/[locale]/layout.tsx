@@ -15,6 +15,7 @@ import ChatBoxButton from "@/components/ui/chat-box-btn";
 import LocaleSwitcher from "@/components/ui/locale-switcher";
 import ThemeSwitch from "@/components/ui/theme-switch";
 import { setRequestLocale } from "next-intl/server";
+// import { LavaLamp } from "@/components/fluid-blob";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,10 +50,8 @@ export default async function RootLayout({
       >
         {/* Pink/red gradient - hidden on mobile, visible on sm screens and up */}
         <div className="absolute right-[11rem] top-[-6rem] -z-10 hidden h-[31.25rem] w-[31.25rem] rounded-full bg-[#fcdedf] blur-[9rem] dark:bg-[#946263] sm:block sm:w-[68.75rem]"></div>
-
         {/* Blue gradient - hidden on mobile, visible on sm screens and up */}
         <div className="absolute left-[-30rem] top-[-1rem] -z-10 hidden h-[31.25rem] w-[50rem] rounded-full bg-[#b5daff] blur-[9rem] dark:bg-[#184068] sm:block sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-
         <ThemeContextProvider>
           <NextIntlClientProvider>
             <ActiveSectionContextProvider>
@@ -61,7 +60,7 @@ export default async function RootLayout({
               <Footer />
               <Toaster position="top-right" />
               <ChatBoxButton />
-              <div className="fixed right-5 top-7 flex space-x-2">
+              <div className="align-center fixed right-5 top-7 flex items-center space-x-3">
                 <LocaleSwitcher />
                 <ThemeSwitch />
               </div>
