@@ -139,7 +139,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
       {isAiMessage && (
         <Image
           src={profileImage}
-          alt="Scheff portrait"
+          alt="Scheff Portrait"
           width="192"
           height="192"
           quality="95"
@@ -168,7 +168,7 @@ function ChatMessage({ message: { role, content } }: ChatMessageProps) {
               <h3 {...props} className="mt-3 font-semibold first:mt-0" />
             ),
             p: ({ node, ...props }) => (
-              <p {...props} className="mt-3 first:mt-0" />
+              <p {...props} className="mt-3 text-pretty first:mt-0" />
             ),
             ul: ({ node, ...props }) => (
               <ul
