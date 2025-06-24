@@ -5,6 +5,7 @@ import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/ui/section-divider";
 import Skills from "@/components/skills";
+import ChatBoxButton from "@/components/ui/chat-box-btn";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
+      <ChatBoxButton />
     </main>
   );
 }

@@ -11,7 +11,6 @@ import Footer from "@/components/footer";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-import ChatBoxButton from "@/components/ui/chat-box-btn";
 import LocaleSwitcher from "@/components/ui/locale-switcher";
 import ThemeSwitch from "@/components/ui/theme-switch";
 import { setRequestLocale } from "next-intl/server";
@@ -59,8 +58,7 @@ export default async function RootLayout({
               {children}
               <Footer />
               <Toaster position="top-right" />
-              <ChatBoxButton />
-              <div className="align-center fixed right-5 top-7 flex items-center space-x-3">
+              <div className="fixed right-5 top-7 flex items-center justify-center space-x-3">
                 <LocaleSwitcher />
                 <ThemeSwitch />
               </div>
