@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AIChatBox from "../ai-chat-box";
+import AIChatBox from "./ai-chat-box";
 import Image from "next/image";
 import profileImage from "@/assets/do-nothing-club-dog.jpg";
 import { useTranslations } from "next-intl";

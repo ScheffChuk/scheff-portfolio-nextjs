@@ -14,7 +14,6 @@ import { Toaster } from "react-hot-toast";
 import LocaleSwitcher from "@/components/ui/locale-switcher";
 import ThemeSwitch from "@/components/ui/theme-switch";
 import { setRequestLocale } from "next-intl/server";
-// import { LavaLamp } from "@/components/fluid-blob";
 
 const inter = Inter({ subsets: ["latin"] });
 
