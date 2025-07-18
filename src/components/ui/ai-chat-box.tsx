@@ -50,8 +50,12 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         open ? "fixed" : "hidden",
       )}
     >
-      <div className="flex h-[500px] flex-col rounded-xl bg-white shadow-xl dark:bg-gray-800">
-        <button onClick={onClose} className="m-2 ms-auto block">
+      <div className="flex h-[500px] flex-col rounded-xl bg-white/30 shadow-xl backdrop-blur-sm dark:bg-gray-800/80">
+        <button
+          onClick={onClose}
+          className="m-2 ms-auto block text-gray-400"
+          title="Close chat"
+        >
           <XCircle size={24} />
         </button>
         <div className="mt-3 h-full overflow-auto px-3" ref={scrollRef}>
@@ -95,7 +99,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         <form onSubmit={handleSubmit} className="m-3 flex gap-2">
           <button
             type="button"
-            className="flex w-10 flex-none items-center justify-center"
+            className="flex w-10 flex-none items-center justify-center text-gray-400"
             title="Clear chat"
             onClick={() => setMessages([])}
           >

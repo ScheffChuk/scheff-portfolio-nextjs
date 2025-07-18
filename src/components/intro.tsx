@@ -38,7 +38,7 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.25rem] border-white object-cover shadow-xl"
+              className="h-24 w-24 rounded-full border-[0.1rem] border-white/30 object-cover shadow-xl"
             />
           </motion.div>
 
@@ -78,7 +78,7 @@ export default function Intro() {
         <div className="flex flex-row gap-2">
           <Link
             href="#contact"
-            className="group flex items-center gap-2 rounded-full bg-gray-800 px-7 py-3 text-white outline-none transition hover:scale-105 hover:bg-gray-950 focus:scale-105 active:scale-105 md:bg-gray-900"
+            className="group flex items-center gap-2 rounded-full bg-gray-800 px-7 py-3 text-white outline-none transition hover:scale-105 hover:bg-gray-950 focus:scale-105 active:scale-105"
             onClick={() => {
               setActiveSection("Contact");
               setTimeOfLastClick(Date.now());
@@ -88,7 +88,7 @@ export default function Intro() {
           </Link>
 
           <a
-            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white/30 p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
             href="https://github.com/ScheffChuk"
             target="_blank"
           >

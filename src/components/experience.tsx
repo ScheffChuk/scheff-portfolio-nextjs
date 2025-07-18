@@ -35,11 +35,14 @@ export default function Experience() {
             <VerticalTimelineElement
               contentStyle={{
                 background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                  theme === "light"
+                    ? "rgba(240, 240, 240, 0.1)"
+                    : "rgba(255, 255, 255, 0.1)",
                 boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
+                borderRadius: "0.3rem",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -51,13 +54,15 @@ export default function Experience() {
               icon={item.icon}
               iconStyle={{
                 background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
+                  theme === "light"
+                    ? "rgba(240, 240, 240, 0.05)"
+                    : "rgba(255, 255, 255, 0.15)",
+                fontSize: "0.15rem",
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="!mt-2 font-normal">{item.location}</p>
-              <p className="!mt-2 !font-normal text-gray-700 dark:text-white/75">
+              <p className="!mt-2 text-pretty !font-normal text-gray-700 dark:text-white/85">
                 {item.description}
               </p>
             </VerticalTimelineElement>

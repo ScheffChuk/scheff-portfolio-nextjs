@@ -32,7 +32,7 @@ export default function ChatBoxButton() {
   return (
     <>
       {showPopup && (
-        <div className="animate-fade-in bottom-16 right-5 mb-3 rounded-lg bg-white p-3 shadow-lg dark:bg-gray-800">
+        <div className="animate-fade-in fixed bottom-16 right-5 mb-3 rounded-lg bg-white p-3 shadow-lg dark:bg-gray-800">
           <p className="text-sm">{t("greeting")}</p>
         </div>
       )}

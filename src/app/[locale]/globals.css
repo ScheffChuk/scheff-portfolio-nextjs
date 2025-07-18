@@ -18,7 +18,7 @@ html.dark {
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    @apply bg-gray-50;
+    @apply bg-gray-50/30;
   }
   ::-webkit-scrollbar-thumb {
     @apply bg-blue-400;
@@ -27,7 +27,7 @@ html.dark {
 
   .dark {
     ::-webkit-scrollbar {
-      @apply bg-gray-900;
+      @apply bg-gray-900/30;
     }
     ::-webkit-scrollbar-thumb {
       @apply bg-blue-900;
