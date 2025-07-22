@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import { motion } from "motion/react";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
@@ -23,14 +22,7 @@ export default function Intro() {
     >
       <div className="flex items-center justify-center">
         <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
-          >
+          <div>
             <Image
               src={profileImage}
               alt="Scheff portrait"
@@ -40,41 +32,18 @@ export default function Intro() {
               priority={true}
               className="h-24 w-24 rounded-full border-[0.1rem] border-white/30 object-cover shadow-xl"
             />
-          </motion.div>
+          </div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
+          <span className="absolute bottom-0 right-0 text-4xl">👋</span>
         </div>
       </div>
 
-      <motion.h1
-        className="mb-10 mt-4 text-pretty px-4 text-center text-xl font-medium !leading-[1.5] text-gray-900 dark:text-white/80 sm:px-0 sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
+      <h1 className="mb-10 mt-4 text-pretty px-4 text-center text-xl font-medium !leading-[1.5] text-gray-900 dark:text-white/80 sm:px-0 sm:text-4xl">
         <span className="font-semibold">{t("greeting")}</span>
         <span>{t("selfIntro")}</span>
-      </motion.h1>
+      </h1>
 
-      <motion.div
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
+      <div className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row">
         <div className="flex flex-row gap-2">
           <Link
             href="#contact"
@@ -95,7 +64,7 @@ export default function Intro() {
             <FaGithubSquare />
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

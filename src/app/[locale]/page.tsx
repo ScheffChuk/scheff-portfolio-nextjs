@@ -8,6 +8,9 @@ import Skills from "@/components/skills";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
+import LocaleSwitcher from "@/components/ui/locale-switcher";
+import ThemeSwitch from "@/components/ui/theme-switch";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
@@ -20,6 +23,10 @@ export default function Home() {
       <Experience />
       <Contact />
       <Footer />
+      <div className="fixed right-5 top-7 flex items-center justify-center space-x-3">
+        <LocaleSwitcher />
+        <ThemeSwitch />
+      </div>
     </main>
   );
 }

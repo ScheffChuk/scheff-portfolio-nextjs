@@ -32,7 +32,7 @@ export default function ProjectCard({
       className="group mb-3 last:mb-0 sm:mb-8"
     >
       <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
-        <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100/30 transition hover:bg-gray-200/60 dark:bg-white/20 dark:text-white dark:hover:bg-white/30 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8">
+        <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-black/5 bg-white/50 transition hover:bg-white/70 dark:bg-gray-800/50 dark:text-white dark:hover:bg-gray-800/70 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8">
           <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
             <h3 className="text-2xl font-semibold">{title}</h3>
             <p className="my-2 text-pretty text-gray-700 dark:text-white/80">

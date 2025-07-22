@@ -9,8 +9,6 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-import LocaleSwitcher from "@/components/ui/locale-switcher";
-import ThemeSwitch from "@/components/ui/theme-switch";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import backgroundImage from "@/assets/bg-img.jpg";
@@ -50,20 +48,18 @@ export default async function RootLayout({
         <Image
           src={backgroundImage}
           alt="background"
+          placeholder="blur"
           quality={50}
           style={{ objectFit: "cover", height: "100%", width: "100%" }}
           className="fixed inset-0 z-[-1] opacity-55 dark:opacity-35"
           priority={true}
+          loading="eager"
         />
         <ThemeContextProvider>
           <NextIntlClientProvider>
             <ActiveSectionContextProvider>
               {children}
               <Toaster position="top-right" />
-              <div className="fixed right-5 top-7 flex items-center justify-center space-x-3">
-                <LocaleSwitcher />
-                <ThemeSwitch />
-              </div>
               <ChatBoxButton />
             </ActiveSectionContextProvider>
           </NextIntlClientProvider>

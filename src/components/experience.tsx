@@ -36,8 +36,8 @@ export default function Experience() {
               contentStyle={{
                 background:
                   theme === "light"
-                    ? "rgba(240, 240, 240, 0.1)"
-                    : "rgba(255, 255, 255, 0.1)",
+                    ? "rgba(240, 240, 240, 0.5)"
+                    : "rgb(30, 41, 57, 0.5)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.1)",
                 textAlign: "left",
@@ -48,7 +48,7 @@ export default function Experience() {
                 borderRight:
                   theme === "light"
                     ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                    : "0.4rem solid rgb(30, 41, 57, 0.5)",
               }}
               date={item.date}
               icon={item.icon}

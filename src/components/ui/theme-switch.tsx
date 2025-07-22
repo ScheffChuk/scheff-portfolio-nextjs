@@ -15,9 +15,9 @@ export default function ThemeSwitch() {
       }
     >
       {theme === "light" ? (
-        <BsSun className="text-lg text-yellow-300" />
+        <BsSun className="text-xl text-yellow-200" />
       ) : (
-        <BsMoon className="text-lg text-[#3399ff]" />
+        <BsMoon className="text-xl text-[#3399ff]" />
       )}
     </button>
   );

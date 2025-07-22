@@ -50,7 +50,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         open ? "fixed" : "hidden",
       )}
     >
-      <div className="flex h-[500px] flex-col rounded-xl bg-white/30 shadow-xl backdrop-blur-sm dark:bg-gray-800/80">
+      <div className="flex h-[500px] flex-col rounded-xl bg-gray-200/80 shadow-xl backdrop-blur-sm dark:bg-gray-800/80">
         <button
           onClick={onClose}
           className="m-2 ms-auto block text-gray-400"
