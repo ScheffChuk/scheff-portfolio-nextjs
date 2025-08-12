@@ -6,7 +6,7 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/ui/section-divider";
 import Skills from "@/components/skills";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+// import Footer from "@/components/footer";
 
 import LocaleSwitcher from "@/components/ui/locale-switcher";
 
@@ -21,7 +21,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
       <div className="fixed right-5 top-7 flex items-center justify-center space-x-3">
         <LocaleSwitcher />
       </div>

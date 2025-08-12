@@ -37,13 +37,13 @@ export default function Header() {
   };
 
   return (
-    <div className="fixed bottom-5 left-1/2 z-[999] max-w-full -translate-x-1/2">
+    <div className="fixed bottom-5 left-1/2 z-[999] max-w-full -translate-x-1/2 drop-shadow-md">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Dock className="items-end pb-3" magnification={60} distance={120}>
+        <Dock className="items-end pb-3 rounded-full" magnification={70} distance={100}>
           {links.map((link) => {
             const IconComponent = iconMap[link.name as keyof typeof iconMap];
             return (
@@ -83,7 +83,11 @@ export default function Header() {
             onClick={toggleTheme}
           >
             <DockLabel>
-              {!mounted ? "Theme" : currentTheme === "light" ? "Dark Mode" : "Light Mode"}
+              {!mounted
+                ? "Theme"
+                : currentTheme === "light"
+                  ? "Dark Mode"
+                  : "Light Mode"}
             </DockLabel>
             <DockIcon>
               <div className="flex h-full w-full items-center justify-center text-gray-700 transition-colors hover:text-[#3399ff] dark:text-gray-400 dark:hover:text-[#3399ff]">

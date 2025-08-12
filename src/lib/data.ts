@@ -2,10 +2,11 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import pepperFlakesImg from "@/assets/pepperFlakesImg.png";
 import scheffDevImgJa from "@/assets/ScheffDevImgJa.png";
 import scheffDevImgEn from "@/assets/ScheffDevImgEn.png";
 import japanDemographicChartImg from "@/assets/Japan-demographic-app.png";
+import amnesiacNoteImg from "@/assets/amesiac-note.png";
+import HeadSalonImg from "@/assets/headsalon.png";
 
 export const links = [
   {
@@ -93,25 +94,33 @@ export const projectsData = [
     title: "My site",
     description:
       "My portfolio website. It serves as a playground for me to try out various techs, including multilingual support, dark mode, animations, and an AI chatbot.",
-    tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
     imageUrl: scheffDevImgEn,
     websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
-  },
-  {
-    title: "Pepper Flakes",
-    description:
-      "An expense tracker application for my own use, built with Next.js 15, featuring PostgreSQL database integration via Drizzle ORM, and secure authentication through Clerk.",
-    tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
-    imageUrl: pepperFlakesImg,
-    websiteUrl: "https://pepperflakes.vercel.app",
   },
   {
     title: "Japan Demographic Chart App",
     description:
       "This app was developed as a coding test submission, and regardless of the interview outcome, I learned a great deal and received valuable feedback.",
-    tags: ["Next 15", "React 19", "Tailwind CSS", "Tanstack Query", "Zustand"],
+    tags: ["Next", "React", "Tailwind CSS", "Tanstack Query", "Zustand"],
     imageUrl: japanDemographicChartImg,
     websiteUrl: "https://population-trends-japan-nextjs.vercel.app",
+  },
+  {
+    title: "HeadSalon",
+    description:
+      "I built a blog web app for my favorite writer, WhigZhou, with a focus on a clean, beautiful design, exceptional speed, and a smooth user experience. It also includes a variety of  “nice-to-have” features.",
+    tags: ["Next 15", "React 19", "Tailwind CSS", "Convex"],
+    imageUrl: HeadSalonImg,
+    websiteUrl: "https://headsalon.vercel.app/",
+  },
+  {
+    title: "Amnesiac",
+    description:
+      "An AI-powered note-taking app using Next.js, Convex, and Vercel AI SDK.",
+    tags: ["Next", "React", "Tailwind CSS", "Convex", "AI SDK"],
+    imageUrl: amnesiacNoteImg,
+    websiteUrl: "https://ainote-next-convex.vercel.app/",
   },
 ] as const;
 
@@ -119,26 +128,34 @@ export const projectsDataJap = [
   {
     title: "私のホームページ",
     description:
-      "Next.js 15で構築した、私のポートフォリオサイトです。プレイグラウンドとして、多言語対応、ダークモード、アニメーション、AIチャットボットなど、色々技術を試しています。",
-    tags: ["Next.js 15", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
+      "私のポートフォリオサイトです。プレイグラウンドとして、多言語対応、ダークモード、アニメーション、AIチャットボットなど、色々技術を試しています。",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Motion", "Resend"],
     imageUrl: scheffDevImgJa,
     websiteUrl: "https://github.com/scheffchuk/scheff-portfolio-nextjs",
   },
   {
-    title: "Pepper Flakes",
-    description:
-      "Next.js 15で構築した、家計簿アプリです。Drizzle ORMを通じてPostgreSQLデータベース統合と、Clerkによる認証機能を用意しています。",
-    tags: ["Next.js 15", "Hono.js", "NeonDB", "Drizzle", "Tanstack", "Zustand"],
-    imageUrl: pepperFlakesImg,
-    websiteUrl: "https://pepperflakes.vercel.app",
-  },
-  {
-    title: "日本人口推移チャート",
+    title: "日本人口推移チャートアプリ",
     description:
       "このアプリはコーディングテストの提出物として開発しましたが、面接の結果にかかわらず、多くのことを学び、貴重なフィードバックをいただきました。",
-    tags: ["Next 15", "React 19", "Tailwind CSS", "Tanstack Query", "Zustand"],
+    tags: ["Next", "React", "Tailwind CSS", "Tanstack Query", "Zustand"],
     imageUrl: japanDemographicChartImg,
     websiteUrl: "https://population-trends-japan-nextjs.vercel.app",
+  },
+  {
+    title: "HeadSalon",
+    description:
+      "私のお気に入りの作家、WhigZhouのために制作したブログWebアプリです。クリーンで美しいデザイン、優れた高速性、そして滑らかな操作感にこだわっています。さまざまな便利で嬉しい機能も盛り込みました。",
+    tags: ["Next", "React", "Tailwind CSS", "Convex"],
+    imageUrl: HeadSalonImg,
+    websiteUrl: "https://headsalon.vercel.app/",
+  },
+  {
+    title: "Amnesiac",
+    description:
+      "Next.js、Convex、Vercel AI SDKを使用したAI駆動のノート作成アプリです。",
+    tags: ["Next", "React", "Tailwind CSS", "Convex", "AI SDK"],
+    imageUrl: amnesiacNoteImg,
+    websiteUrl: "https://ainote-next-convex.vercel.app/",
   },
 ] as const;
 

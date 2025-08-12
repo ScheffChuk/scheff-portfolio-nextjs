@@ -19,7 +19,7 @@ export default function Experience() {
   const t = useTranslations("experience");
   const locale = useLocale();
   const [mounted, setMounted] = React.useState(false);
-  
+
   const currentTheme = resolvedTheme || theme;
 
   React.useEffect(() => {
@@ -34,7 +34,7 @@ export default function Experience() {
       <section
         id="experience"
         ref={ref}
-        className="mb-28 scroll-mt-28 text-pretty sm:mb-40"
+        className="mb-28 scroll-mt-16 text-pretty sm:mb-40"
       >
         <SectionHeading>{t("title")}</SectionHeading>
       </section>
@@ -45,7 +45,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="mb-28 scroll-mt-28 text-pretty sm:mb-40"
+      className="mb-28 scroll-mt-16 text-pretty sm:mb-40"
     >
       <SectionHeading>{t("title")}</SectionHeading>
       <VerticalTimeline lineColor="">

@@ -18,7 +18,7 @@ export default function Projects() {
     locale === "ja" ? projectsDataJap : projectsData;
 
   return (
-    <section ref={ref} id="projects" className="mb-28 scroll-mt-28">
+    <section ref={ref} id="projects" className="mb-28 scroll-mt-16">
       <SectionHeading>{t("title")}</SectionHeading>
       <div>
         {currentProjectsData.map((project, index) => (
