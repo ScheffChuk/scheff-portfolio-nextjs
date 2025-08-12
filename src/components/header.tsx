@@ -1,64 +1,112 @@
 "use client";
 
-import React from "react";
 import { motion } from "motion/react";
 import { links } from "@/lib/data";
-import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Dock, DockItem, DockIcon, DockLabel } from "@/components/ui/dock";
+import { Home, User, FolderOpen, Code, Briefcase, Mail } from "lucide-react";
+import { BsMoon, BsSun } from "react-icons/bs";
+
+const iconMap = {
+  Home: Home,
+  About: User,
+  Projects: FolderOpen,
+  Skills: Code,
+  Experience: Briefcase,
+  Contact: Mail,
+};
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = resolvedTheme || theme;
+
+  const toggleTheme = () => {
+    setTheme(currentTheme === "light" ? "dark" : "light");
+  };
 
   return (
-    <header className="relative z-[999]">
+    <div className="fixed bottom-5 left-1/2 z-[999] max-w-full -translate-x-1/2">
       <motion.div
-        className="fixed left-1/2 top-0 hidden h-[4.5rem] w-full rounded-none bg-white/70 bg-opacity-80 shadow-lg shadow-black/[0.03] ring-1 ring-black/5 dark:border-black/10 dark:bg-gray-950/70 dark:bg-opacity-75 sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full lg:flex"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
-
-      <nav className="fixed left-1/2 top-[0.15rem] hidden h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 lg:flex">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-700 dark:text-gray-400 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="relative flex h-3/4 items-center justify-center"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 transition hover:text-[#3399ff]",
-                  {
-                    "text-[#3399ff]": activeSection === link.name,
-                  },
-                )}
-                href={link.hash}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Dock className="items-end pb-3" magnification={60} distance={120}>
+          {links.map((link) => {
+            const IconComponent = iconMap[link.name as keyof typeof iconMap];
+            return (
+              <DockItem
+                key={link.hash}
+                className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800"
                 onClick={() => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
+                  // Navigate to the section
+                  window.location.hash = link.hash;
                 }}
               >
-                {link.name}
+                <DockLabel>{link.name}</DockLabel>
+                <DockIcon>
+                  <div
+                    className={clsx(
+                      "flex h-full w-full items-center justify-center transition-colors",
+                      {
+                        "text-[#3399ff]": activeSection === link.name,
+                        "text-gray-700 hover:text-[#3399ff] dark:text-gray-400 dark:hover:text-[#3399ff]":
+                          activeSection !== link.name,
+                      },
+                    )}
+                  >
+                    <IconComponent size={20} />
+                  </div>
+                </DockIcon>
+              </DockItem>
+            );
+          })}
 
-                {link.name === activeSection && (
-                  <motion.span
-                    className="absolute inset-0 -z-10 rounded-full border border-gray-300/30 bg-gray-100/30 drop-shadow-sm dark:border-gray-600/30 dark:bg-gray-600/50"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
+          {/* Theme Switch */}
+          <DockItem
+            key="theme-switch"
+            className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800"
+            onClick={toggleTheme}
+          >
+            <DockLabel>
+              {!mounted ? "Theme" : currentTheme === "light" ? "Dark Mode" : "Light Mode"}
+            </DockLabel>
+            <DockIcon>
+              <div className="flex h-full w-full items-center justify-center text-gray-700 transition-colors hover:text-[#3399ff] dark:text-gray-400 dark:hover:text-[#3399ff]">
+                {!mounted ? (
+                  <div className="animate-pulse">
+                    <BsSun size={20} className="text-gray-400" />
+                  </div>
+                ) : currentTheme === "light" ? (
+                  <BsMoon
+                    size={20}
+                    className="text-gray-700 hover:text-[#3399ff]"
+                  />
+                ) : (
+                  <BsSun
+                    size={20}
+                    className="text-yellow-400 hover:text-yellow-300"
+                  />
                 )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+              </div>
+            </DockIcon>
+          </DockItem>
+        </Dock>
+      </motion.div>
+    </div>
   );
 }

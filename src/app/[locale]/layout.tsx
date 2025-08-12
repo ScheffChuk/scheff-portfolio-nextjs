@@ -6,13 +6,10 @@ import "./globals.css";
 
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import ThemeContextProvider from "@/context/theme-context";
+import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
 
 import { setRequestLocale } from "next-intl/server";
-import Image from "next/image";
-import backgroundImage from "@/assets/bg-img.jpg";
-import ChatBoxButton from "@/components/ui/chat-box-btn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,29 +38,24 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className="!scroll-smooth">
+    <html lang={locale} className="!scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.className} relative bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
+        className={`${inter.className} relative bg-gray-100 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
-        <Image
-          src={backgroundImage}
-          alt="background"
-          placeholder="blur"
-          quality={50}
-          style={{ objectFit: "cover", height: "100%", width: "100%" }}
-          className="fixed inset-0 z-[-1] opacity-55 dark:opacity-35"
-          priority={true}
-          loading="eager"
-        />
-        <ThemeContextProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          storageKey="theme"
+          disableTransitionOnChange={false}
+        >
           <NextIntlClientProvider>
             <ActiveSectionContextProvider>
               {children}
               <Toaster position="top-right" />
-              <ChatBoxButton />
             </ActiveSectionContextProvider>
           </NextIntlClientProvider>
-        </ThemeContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

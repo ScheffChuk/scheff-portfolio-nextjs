@@ -1,18 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profileImage from "@/assets/do-nothing-club-dog.jpg";
 import { useTranslations } from "next-intl";
+import AIChatBox from "@/components/ui/ai-chat-box";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const t = useTranslations("intro");
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
     <section
@@ -22,7 +24,10 @@ export default function Intro() {
     >
       <div className="flex items-center justify-center">
         <div className="relative">
-          <div>
+          <div
+            onClick={() => setIsChatOpen(true)}
+            className="cursor-pointer transition hover:scale-105"
+          >
             <Image
               src={profileImage}
               alt="Scheff portrait"
@@ -65,6 +70,10 @@ export default function Intro() {
           </a>
         </div>
       </div>
+      <AIChatBox
+        open={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
     </section>
   );
 }

@@ -46,14 +46,14 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
   return (
     <div
       className={cn(
-        "bottom-3 right-0 z-50 w-full max-w-[450px] p-1 xl:right-28",
+        "bottom-20 right-10 z-900 w-full max-w-[500px] p-1",
         open ? "fixed" : "hidden",
       )}
     >
-      <div className="flex h-[500px] flex-col rounded-xl bg-gray-200/80 shadow-xl backdrop-blur-sm dark:bg-gray-800/80">
+      <div className="flex h-[450px] flex-col rounded-xl bg-gray-100 shadow-xl backdrop-blur-sm dark:bg-gray-800 z-999">
         <button
           onClick={onClose}
-          className="m-2 ms-auto block text-gray-400"
+          className="m-2 ms-auto block text-gray-600"
           title="Close chat"
         >
           <XCircle size={24} />
